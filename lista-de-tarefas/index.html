@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskVibe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="has-background-link py-5 mb-4">
+    <div class="container">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <h1 class="title has-text-white is-size-2">TaskVibe</h1>
+          </div>
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <button id="btn-tema" class="button is-white is-rounded" title="Alternar tema">
+              <span id="icone-tema">🌙</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container" style="width: 100%;">
+    <div class="box">
+      <form id="form-tarefa" autocomplete="off" class="mb-4">
+        <div class="field">
+          <label class="label">Título da tarefa</label>
+          <div class="control">
+            <input type="text" id="titulo" class="input" placeholder="Digite o título da tarefa" maxlength="60" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Descrição (opcional)</label>
+          <div class="control">
+            <textarea id="descricao" class="textarea" placeholder="Digite uma descrição para a tarefa" maxlength="180"></textarea>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Categoria</label>
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <div class="select is-fullwidth">
+                <select id="categoria" required>
+                  <!-- Opções de categoria serão inseridas dinamicamente -->
+                </select>
+              </div>
+            </div>
+            <div class="control">
+              <input type="text" id="nova-categoria" class="input" placeholder="Nova categoria" maxlength="20" autocomplete="off">
+            </div>
+            <div class="control">
+              <button type="button" id="btn-add-categoria" class="button is-info" title="Adicionar nova categoria">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button type="submit" id="btn-submit" class="button is-link is-fullwidth">Adicionar Tarefa</button>
+            <button type="button" id="btn-cancelar-edicao" class="button is-light is-fullwidth" style="display: none; margin-top: 0.5rem;">Cancelar Edição</button>
+          </div>
+        </div>
+      </form>
+      <section class="filtros mb-4">
+        <div class="field">
+          <label class="label">Filtrar por categoria</label>
+          <div class="buttons" id="filtro-categorias" style="overflow-x: auto; max-width: 100%; flex-wrap: nowrap;">
+            <!-- Botões de filtro de categoria serão inseridos dinamicamente -->
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Filtrar por status</label>
+          <div class="buttons" id="filtro-status">
+            <button type="button" data-status="Todas" class="button is-primary">Todas</button>
+            <button type="button" data-status="Pendentes" class="button is-light">Pendentes</button>
+            <button type="button" data-status="Concluídas" class="button is-light">Concluídas</button>
+            <button type="button" data-status="Excluídas" class="button is-light">Excluídas</button>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Buscar e gerenciar</label>
+          <div class="field has-addons">
+            <div class="control">
+              <button type="button" id="btn-excluir-tudo" class="button is-danger">Excluir tudo</button>
+            </div>
+            <div class="control is-expanded">
+              <input type="text" id="busca" class="input" placeholder="Buscar por título...">
+            </div>
+            <div class="control">
+              <button type="button" id="btn-limpar-excluidas" class="button is-warning" style="display: none;">Limpar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <ul class="tarefas" id="lista-tarefas"></ul>
+      <div id="paginacao-tarefas" class="mt-4" style="display:flex;justify-content:center;gap:0.5rem;"></div>
+    </div>
+  </main>
+  <footer id="footer-contador" class="has-text-centered has-text-grey py-4">
+    0 pendentes | 0 concluídas
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

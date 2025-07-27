@@ -126,7 +126,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ## 👨‍💻 Autor
 
 **Seu Nome**
-- GitHub: [@seu-usuario](https://github.com/viniciusvacare)
+- GitHub: [@viniciusvacare](https://github.com/viniciusvacare)
 
 ---
 

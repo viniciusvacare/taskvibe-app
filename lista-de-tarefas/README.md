@@ -100,16 +100,6 @@ php -S localhost:8000
 - Data de conclusão
 - Data de exclusão
 
-## 🌐 Deploy
-
-### GitHub Pages
-1. Vá para Settings > Pages no seu repositório
-2. Selecione "Deploy from a branch"
-3. Escolha a branch `main` e pasta `/ (root)`
-4. Clique em "Save"
-
-O site estará disponível em: `https://seu-usuario.github.io/taskvibe-app`
-
 ## 📁 Estrutura do Projeto
 
 ```
@@ -136,7 +126,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ## 👨‍💻 Autor
 
 **Seu Nome**
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+- GitHub: [@seu-usuario](https://github.com/viniciusvacare)
 
 ---
 

@@ -2,7 +2,7 @@
 
 Uma aplicação web moderna de gerenciamento de tarefas com categorias, construída com HTML, CSS e JavaScript vanilla.
 
-![TaskVibe Screenshot](./picture/image.png)
+![TaskVibe Screenshot](/picture/image.png)
 
 ## ✨ Funcionalidades
 
